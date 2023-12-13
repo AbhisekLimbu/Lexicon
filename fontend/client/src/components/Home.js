@@ -1,14 +1,23 @@
 
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
-  return (
-    <div className="HomePage flex flex-col items-center justify-center bg-blue-500 text-white p-8 h-screen"> 
-        
+import backgroundImage from './picture/pic1.jpg';
 
-      <p className="text-lg font-semibold text-center">
-        Step into a welcoming space where sharing, learning, helping, and making friends come together.
+const Home = () => {
+  const containerStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    
+  };
+
+  return (
+    <div style={containerStyle} className="bg-blue-500 text-white">
+      <p className="text-4xl font-bold mb-4 animate__animated animate__fadeIn">
+        A space where sharing, learning, helping, and making friends come together.
       </p>
+     
     </div>
   );
 };
